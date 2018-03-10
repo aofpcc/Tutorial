@@ -1,6 +1,6 @@
 public class SolarSystemTest{
   public static void main(String[] args){
-    SolarSystem<Planet> solarSystem = new SolarSystem<Planet>();
+    SolarSystem solarSystem = new SolarSystem();
     solarSystem.add( new Planet("E", 400) );
     solarSystem.add( new Planet("C", 300) );
     solarSystem.add( new Planet("B", 200) );
