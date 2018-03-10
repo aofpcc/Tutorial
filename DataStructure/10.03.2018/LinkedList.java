@@ -3,7 +3,7 @@ public class LinkedList<E>{
   private Node<E> head;
   private Node<E> tail;
   
-  class Node<E>{
+  private class Node<E>{
     private E data;
     private Node<E> next;
     public Node( E data){
@@ -35,9 +35,9 @@ public class LinkedList<E>{
   public void showAll(){
     Node<E> iterator = head;
     while( iterator != null ){
-      System.out.print( iterator.data() );
+      System.out.println( iterator.data() );
       iterator = iterator.next();
-      if( iterator != null ) System.out.print( ", ");
+      if( iterator != null ) System.out.println( "----------");
     }
     System.out.println();
   }
