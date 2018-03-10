@@ -8,6 +8,5 @@ public class SolarSystemTest{
     solarSystem.add( new Planet("F", 600) );
     solarSystem.add( new Planet("D", 400) );
     solarSystem.showAll();
-    
   }
 }
