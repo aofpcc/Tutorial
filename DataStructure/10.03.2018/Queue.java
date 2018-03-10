@@ -1,4 +1,4 @@
-public class Stack<E> {
+public class Queue<E> {
   private int size;
   private Node<E> head;
   
@@ -19,45 +19,38 @@ public class Stack<E> {
     }
   }
   
-  public E push(E data){
+  public void add(E data){
     Node<E> newNode = new Node<E>( data );
-    if( size == 0){
+    if( size == 0 ){
       head = newNode;
     }else{
       newNode.setNext( head );
       head = newNode;
     }
     size++;
-    return data;
   }
   
   public E peek(){
-    return head.data();
-  }
-  
-  public E pop(){
     if( size == 0 ) return null;
-    Node<E> temp = head;
-    head = head.next();
-    size-- ;
-    return temp.data();
-  }
-  
-  public boolean isEmpty(){
-    return size == 0;
-  }
-  
-  public int search(E data){
-    int index = -1;
     Node<E> iterator = head;
-    while( iterator != null ){
-      index++;
-      if( iterator.data() == data ){
-        return index;
-      }
+    while( iterator.next() != null ){
       iterator = iterator.next();
     }
-    return index;
+    return iterator.data();
+  }
+  
+  public E poll(){
+    if( size == 0 ) return null;
+    Node<E> iterator = head;
+    Node<E> previous = null;
+    while( iterator.next() != null ){
+      previous = iterator;
+      iterator = iterator.next();
+    }
+    size-- ;
+    if( size != 0 ) previous.setNext( null );
+    else head = null;
+    return iterator.data();
   }
   
 }
