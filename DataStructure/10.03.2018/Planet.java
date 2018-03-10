@@ -3,7 +3,7 @@ public class Planet{
   private double distance;
   public Planet(String n, double d){
     name = n;
-    d = d;
+    distance = d;
   }
   public String name(){
     return name;
