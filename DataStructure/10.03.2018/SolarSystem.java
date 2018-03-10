@@ -45,13 +45,11 @@ public class SolarSystem{
             if( c.distance() > iterator.distance() &&  c.distance() <= iterator.next().distance() ){
               c.setNext( iterator.next() );
               iterator.setNext(c);
-              iterator = c;
               break;
             }
           }else {
             tail.setNext(c);
             tail = c;
-            iterator = tail;
             break;
           }
           iterator = iterator.next();
