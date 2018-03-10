@@ -1,27 +1,27 @@
-public class LinkedList<E>{
+public class LinkedList<Planet>{
   private int size = 0;
-  private Node<E> head;
-  private Node<E> tail;
+  private Node head;
+  private Node tail;
   
-  private class Node<E>{
-    private E data;
-    private Node<E> next;
-    public Node( E data){
+  private class Node{
+    private Planet data;
+    private Node next;
+    public Node( Planet data){
       this.data = data;
     }
-    public E data(){
+    public Planet data(){
       return data;
     }
-    public void setNext(Node<E> next){
+    public void setNext(Node next){
       this.next = next;
     }
-    public Node<E> next(){
+    public Node next(){
       return next;
     }
   }
   
-  public void add(E x){
-    Node<E> c = new Node<E>(x);
+  public void add(Planet x){
+    Node c = new Node(x);
     if( size == 0 ){
       head = c;
       tail = c;
@@ -33,7 +33,7 @@ public class LinkedList<E>{
   }
   
   public void showAll(){
-    Node<E> iterator = head;
+    Node iterator = head;
     while( iterator != null ){
       System.out.println( iterator.data() );
       iterator = iterator.next();

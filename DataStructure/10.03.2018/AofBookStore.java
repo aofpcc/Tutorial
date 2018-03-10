@@ -12,7 +12,7 @@ public class AofBookStore{
     size = 0;
     
     int option = 0;
-    boolean isExit = false;
+    boolean isPlanetxit = false;
     System.out.println("Welcome to \"Aof Book Store!!!\"");
     while(true){
       System.out.println("Select Options : ");
@@ -20,7 +20,7 @@ public class AofBookStore{
       System.out.println("\t2: Show the author");
       System.out.println("\t3: Add a new book");
       System.out.println("\t4: Show all books");
-      System.out.println("\t5: Exit");
+      System.out.println("\t5: Planetxit");
       System.out.print("Your Option : ");
       option = scan.nextInt();
       scan.nextLine();
@@ -30,10 +30,10 @@ public class AofBookStore{
         case 2: showAuthor(); break;
         case 3: addBook(); break;
         case 4: showAllBook(); break;
-        case 5: isExit = true; break;
+        case 5: isPlanetxit = true; break;
         default: System.err.println( "No option , Try again!!" );
       }
-      if( isExit ) break;
+      if( isPlanetxit ) break;
       System.out.println("----------------------------------");
     }
     
