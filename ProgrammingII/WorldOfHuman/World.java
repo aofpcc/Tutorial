@@ -16,11 +16,8 @@ public class World {
   }
   public static void printK( Object obj){
     System.out.println( ((Human)obj).getInfo() );
-    if( obj instanceof Student){
-      System.out.println( "Knowlege : " + ((Student)obj).getKnowledge() );
-    }
-    if( obj instanceof Teacher){
-      System.out.println( "Knowlege : " + ((Teacher)obj).getKnowledge() );
+    if( obj instanceof Learnable){
+      System.out.println( "Knowlege : " + ((Learnable)obj).getKnowledge() );
     }
     System.out.println("_______");
   }
